@@ -11,14 +11,22 @@ int main()
 	b.showInfo();
 	c.showInfo();
 	d.showInfo();
-	cout << "===========================================\n\n";
 
+	cout << "===========================================\n\n";
+	//Copy constructor
 	Medicine k = b;//"Aspirin", TYPES::pills, "India", 20.99
 	k.setTitle("Aspirin Forte");
 
 	b.showInfo();
 	k.showInfo();
 
+	cout << "===========================================\n\n";
+	//Operator =
+	a = d;
+	a.setCountry("India");
+	a.setPrice(200.45);
 
+	a.showInfo();
+	d.showInfo();
 }
 

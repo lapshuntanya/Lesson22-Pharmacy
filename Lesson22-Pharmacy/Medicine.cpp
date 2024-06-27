@@ -26,17 +26,36 @@ Medicine::Medicine(const Medicine& copy_obj)
 {
     //Medicine k = b; this(k) = copy_obj(b)
     int sizeT = strlen(copy_obj.m_title) + 1; //Рахуємо кількість символів
-    m_title = new char[sizeT];//Виділяєму дин. пам'ять необх. розміру
+    m_title = new char[sizeT];//Виділяємo дин. пам'ять необх. розміру
     strcpy_s(m_title, sizeT, copy_obj.m_title); //Копіюємо символи
 
     m_type = copy_obj.m_type;
 
     int sizeC = strlen(copy_obj.m_country) + 1; //Рахуємо кількість символів
-    m_country = new char[sizeC];//Виділяєму дин. пам'ять необх. розміру
+    m_country = new char[sizeC];//Виділяємo дин. пам'ять необх. розміру
     strcpy_s(m_country, sizeC, copy_obj.m_country); //Копіюємо символи
 
     m_price = copy_obj.m_price;
 
+}
+
+Medicine& Medicine::operator=(const Medicine& copy_obj)
+{
+    this->~Medicine();//!!!!!!!!!!!!!!!!!!!!!
+
+    int sizeT = strlen(copy_obj.m_title) + 1; //Рахуємо кількість символів
+    m_title = new char[sizeT];//Виділяємo дин. пам'ять необх. розміру
+    strcpy_s(m_title, sizeT, copy_obj.m_title); //Копіюємо символи
+
+    m_type = copy_obj.m_type;
+
+    int sizeC = strlen(copy_obj.m_country) + 1; //Рахуємо кількість символів
+    m_country = new char[sizeC];//Виділяємo дин. пам'ять необх. розміру
+    strcpy_s(m_country, sizeC, copy_obj.m_country); //Копіюємо символи
+
+    m_price = copy_obj.m_price;
+
+    return *this;//!!!!!!!!!!!!!!!!!!!!!
 }
 
 Medicine::~Medicine(){
