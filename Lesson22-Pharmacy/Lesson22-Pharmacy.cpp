@@ -33,6 +33,15 @@ int main()
 	pharm.addMedicine(c);
 	pharm.addMedicine(d);
 	pharm.addMedicine(Medicine("Aspirin Forte", TYPES::pills, "Spain", 18.99));
-	
+	pharm.showInfo();
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++\n\n";
+	pharm.findMedByTitle("Nurofen");
+	pharm.findMedByTitle("Analgin");
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++\n\n";
+	pharm.sortMedByTitle();
+	pharm.showInfo();
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++\n\n";
+	pharm.sortMedByPrice();
+	pharm.showInfo();
 }
 
