@@ -57,26 +57,22 @@ void Medicine::setPrice(float price){
     }
 }
 
-const char* Medicine::getTitle() const
-{
-    return nullptr;
-}
-
-TYPES Medicine::getType() const
-{
-    return TYPES();
-}
-
-const char* Medicine::getCountry() const
-{
-    return nullptr;
-}
-
-float Medicine::getPrice() const
-{
-    return 0.0f;
-}
+const char* Medicine::getTitle() const{    return m_title;}
+TYPES Medicine::getType() const{    return m_type;}
+const char* Medicine::getCountry() const{    return m_country;}
+float Medicine::getPrice() const{    return m_price; }
 
 void Medicine::showInfo() const
 {
+    cout << "Title: " << m_title << endl;
+    cout << "Type: ";
+    switch (m_type)
+    {
+    case other:  cout << "other.\n";      break;
+    case pills:  cout << "pills.\n";       break;
+    case capsules:  cout << "capsules.\n";       break;
+    case syrope:   cout << "syrope.\n";      break;
+    }
+    cout << "Country: " << m_country << endl;
+    cout << "Price: " << m_price << " UAH.\n\n";
 }
