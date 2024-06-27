@@ -11,6 +11,14 @@ int main()
 	b.showInfo();
 	c.showInfo();
 	d.showInfo();
+	cout << "===========================================\n\n";
+
+	Medicine k = b;//"Aspirin", TYPES::pills, "India", 20.99
+	k.setTitle("Aspirin Forte");
+
+	b.showInfo();
+	k.showInfo();
+
 
 }
 
