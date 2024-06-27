@@ -70,3 +70,15 @@ void Pharmacy::sortMedByTitle(){
         return strcmp(a.getTitle(), b.getTitle()) > 0;
         });
 }
+
+void Pharmacy::showInfo() const
+{
+    cout << "\tPharm:      " << m_name << endl;
+    cout << "\tAddress:    " << m_address << endl;
+    cout << "\tMed amount: " << m_sizeMed << endl;
+    for (int i = 0; i < m_sizeMed; i++)
+    {
+        cout << "\t#" << i + 1 << "medicine\n";
+        m_arrMed[i].showInfo();
+    }
+}

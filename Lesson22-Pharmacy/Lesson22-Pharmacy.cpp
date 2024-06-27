@@ -1,8 +1,7 @@
-#include "Medicine.h"
+#include "Pharmacy.h"
 
 int main()
-{
-	Medicine a;
+{	 
 	Medicine b("Aspirin", TYPES::pills, "India", 20.99);
 	Medicine c("Nurofen", TYPES::capsules, "Italy", 34.56);
 	const Medicine d("Dr. MOM", TYPES::syrope, "France", 150.70);
@@ -29,6 +28,11 @@ int main()
 	a.showInfo();
 	d.showInfo();*/
 
-
+	Pharmacy pharm;
+	pharm.addMedicine(b);
+	pharm.addMedicine(c);
+	pharm.addMedicine(d);
+	pharm.addMedicine(Medicine("Aspirin Forte", TYPES::pills, "Spain", 18.99));
+	
 }
 

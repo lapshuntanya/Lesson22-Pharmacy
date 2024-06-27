@@ -23,5 +23,7 @@ public:
 	void findMedByTitle(const char* title)const;
 	void sortMedByPrice();
 	void sortMedByTitle();
+
+	void showInfo()const;
 };
 
