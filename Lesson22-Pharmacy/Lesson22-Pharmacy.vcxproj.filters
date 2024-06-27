@@ -18,5 +18,13 @@
     <ClCompile Include="Lesson22-Pharmacy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Medicine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Medicine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
